@@ -1,3 +1,3 @@
 output "Ec2_name" {
-    value = aws_instance.xebia.id
+  value = aws_instance.xebia.id
 }

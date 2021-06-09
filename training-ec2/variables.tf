@@ -1,23 +1,27 @@
 variable "aws_region" {
-    default = "us-east-1"
+  default = "us-east-1"
 }
 
 variable "ec2_name" {
-    default = "Manish-Xebia-vm"
+  default = "Manish-Xebia-vm"
+}
+
+variable "key_name" {
+  default = "ms-manish"
 }
 
 variable "ec2_ami" {
-    default = "ami-0d5eff06f840b45e9"
+  default = "ami-0d5eff06f840b45e9"
 }
 
 variable "ec2_instancetype" {
-    default = "t2.micro"
+  default = "t2.micro"
 }
 
 variable "subnet_id" {
-    default = "subnet-540e6632"
+  default = "subnet-540e6632"
 }
 
 variable "ec2_az" {
-    default = "us-east-1d"
+  default = "us-east-1d"
 }
