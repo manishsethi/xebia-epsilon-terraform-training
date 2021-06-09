@@ -1,2 +1,2 @@
-# xebia-epsilon-terraform-training
+# Terraform-training
 This Repo contains the code related to terraform for provisioning resources in cloud.
