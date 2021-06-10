@@ -37,7 +37,7 @@ resource "aws_instance" "web" {
   key_name      = "ms-manish"
 
   provisioner "remote-exec" {
-    inline = ["sudo apt update", "sudo apt install python3 -y", "sudo apt install apache2 -y", "echo Done!"]
+    inline = ["sudo apt update -y", "sudo apt install python3 -y", "sudo apt update -y", "sudo apt install apache2 -y", "echo Done!"]
 
     connection {
       host        = self.public_ip
