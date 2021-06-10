@@ -27,16 +27,15 @@ data "aws_ami" "ubuntu" {
     values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
   }
 
-  owners = [""]
+  owners = ["099720109477"]
 }
 
 resource "aws_instance" "web" {
   count         = 1
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t2.micro"
-  key_name      = ""
-  # valid for debian based system(Ubuntu)
-  # not valide for amazon/windows/rhel system
+  key_name      = "ms-manish"
+
   provisioner "remote-exec" {
     inline = ["sudo apt update -y", "sudo apt install python3 -y", "sudo apt update -y", "sudo apt install apache2 -y", "echo Done!"]
 
