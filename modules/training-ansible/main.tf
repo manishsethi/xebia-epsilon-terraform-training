@@ -34,7 +34,7 @@ resource "aws_instance" "web" {
   count         = 1
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t2.micro"
-  key_name      = "ms-manish"
+  key_name      = ""
 
   provisioner "remote-exec" {
     inline = ["sudo apt update -y", "sudo apt install python3 -y", "sudo apt update -y", "sudo apt install apache2 -y", "echo Done!"]
