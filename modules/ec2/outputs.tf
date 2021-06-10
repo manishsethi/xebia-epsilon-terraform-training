@@ -1,3 +1,3 @@
-output "ECs2_name" {
+output "EC2_name" {
   value = aws_instance.xebia.id
 }

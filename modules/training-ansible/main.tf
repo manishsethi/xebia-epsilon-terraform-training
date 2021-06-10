@@ -35,7 +35,8 @@ resource "aws_instance" "web" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t2.micro"
   key_name      = ""
-
+  # valid for debian based system(Ubuntu)
+  # not valide for amazon/windows/rhel system
   provisioner "remote-exec" {
     inline = ["sudo apt update -y", "sudo apt install python3 -y", "sudo apt update -y", "sudo apt install apache2 -y", "echo Done!"]
 
